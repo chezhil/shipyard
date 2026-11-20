@@ -25,8 +25,8 @@ export default function HomePage() {
 
         {/* One card per product, straight from the data. */}
         <div className="grid">
-          {products.map((product, i) => (
-            <ProductCard key={product.id} product={product} priority={i === 0} />
+          {products.map((product) => (
+            <ProductCard key={product.id} product={product} />
           ))}
         </div>
       </section>

@@ -125,9 +125,3 @@ export const products: Product[] = [
 export function getProduct(id: string): Product | undefined {
   return products.find((p) => p.id === id);
 }
-
-// next/image does not add basePath to local files when images are unoptimized
-// (static export), so prefix it ourselves.
-export function imageSrc(product: Product): string {
-  return `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}${product.image}`;
-}
