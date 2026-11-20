@@ -1,7 +1,7 @@
 // app/components/ProductCard.tsx
 import Image from "next/image";
 import Link from "next/link";
-import type { Product } from "../data/products";
+import { imageSrc, type Product } from "../data/products";
 
 // The card takes one typed product as a prop.
 export default function ProductCard({ product }: { product: Product }) {
@@ -9,7 +9,7 @@ export default function ProductCard({ product }: { product: Product }) {
     <Link href={`/products/${product.id}`} className="card">
       <div className="card-art" style={{ background: product.accent }}>
         <Image
-          src={product.image}
+          src={imageSrc(product)}
           alt={product.name}
           width={460}
           height={345}
