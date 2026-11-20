@@ -1,4 +1,5 @@
 // app/components/ProductCard.tsx
+import Image from "next/image";
 import Link from "next/link";
 import type { Product } from "../data/products";
 
@@ -7,7 +8,14 @@ export default function ProductCard({ product }: { product: Product }) {
   return (
     <Link href={`/products/${product.id}`} className="card">
       <div className="card-art" style={{ background: product.accent }}>
-        <span className="card-emoji">{product.emoji}</span>
+        <Image
+          src={product.image}
+          alt={product.name}
+          width={460}
+          height={345}
+          className="card-img"
+          sizes="(max-width: 560px) 100vw, 230px"
+        />
       </div>
       <div className="card-body">
         <span className="card-category">{product.category}</span>

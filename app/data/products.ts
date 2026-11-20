@@ -8,6 +8,7 @@ export interface Product {
   price: number;
   category: "Sneakers" | "Audio" | "Wearables" | "Gadgets";
   emoji: string;
+  image: string; // e.g. "/products/wave-runner.svg"
   accent: string; // card art background color
   description: string;
   specs: string[];
@@ -21,6 +22,7 @@ export const products: Product[] = [
     price: 129,
     category: "Sneakers",
     emoji: "👟",
+    image: "/products/wave-runner.svg",
     accent: "#6c8cff",
     description:
       "A lightweight daily trainer with a springy foam midsole and a breathable knit upper.",
@@ -33,6 +35,7 @@ export const products: Product[] = [
     price: 89,
     category: "Audio",
     emoji: "🎧",
+    image: "/products/pulse-buds.svg",
     accent: "#a06cff",
     description:
       "Compact earbuds with active noise cancellation and an eight-hour battery.",
@@ -45,6 +48,7 @@ export const products: Product[] = [
     price: 149,
     category: "Sneakers",
     emoji: "🥾",
+    image: "/products/trail-blazer.svg",
     accent: "#3ecf8e",
     description:
       "A rugged trail shoe with a deep-lug outsole and a water-resistant upper.",
@@ -57,6 +61,7 @@ export const products: Product[] = [
     price: 199,
     category: "Wearables",
     emoji: "⌚",
+    image: "/products/orbit-watch.svg",
     accent: "#ff8a5c",
     description:
       "A slim fitness watch with GPS, heart-rate tracking, and a week-long battery.",
@@ -69,6 +74,7 @@ export const products: Product[] = [
     price: 59,
     category: "Audio",
     emoji: "🔊",
+    image: "/products/echo-dome.svg",
     accent: "#f7c948",
     description:
       "A rugged portable speaker with 360-degree sound and twelve hours of playtime.",
@@ -81,6 +87,7 @@ export const products: Product[] = [
     price: 249,
     category: "Gadgets",
     emoji: "📷",
+    image: "/products/spark-cam.svg",
     accent: "#ff6c9a",
     description:
       "A tiny 4K action camera with stabilised video and a mountable, waterproof body.",
@@ -93,6 +100,7 @@ export const products: Product[] = [
     price: 49,
     category: "Gadgets",
     emoji: "🔋",
+    image: "/products/volt-pack.svg",
     accent: "#4cc9f0",
     description:
       "A slim 20,000mAh power bank with fast USB-C charging for phones and laptops.",
@@ -105,6 +113,7 @@ export const products: Product[] = [
     price: 69,
     category: "Wearables",
     emoji: "📿",
+    image: "/products/pace-band.svg",
     accent: "#9be564",
     description:
       "A minimalist activity band that tracks steps, pace, and sleep with a two-week battery.",

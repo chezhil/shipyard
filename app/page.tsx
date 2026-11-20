@@ -1,6 +1,13 @@
 // app/page.tsx
+import type { Metadata } from "next";
 import ProductCard from "./components/ProductCard";
 import { products } from "./data/products";
+
+export const metadata: Metadata = {
+  title: "ShipYard: Gear for builders, runners, and explorers",
+  description:
+    "Browse sneakers, audio, wearables, and gadgets in the ShipYard catalog.",
+};
 
 export default function HomePage() {
   return (
