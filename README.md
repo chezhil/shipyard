@@ -2,8 +2,11 @@
 
 A product-catalog storefront built with Next.js + TypeScript.
 
+- Repo: https://github.com/chezhil/shipyard
 - Live site: https://chezhil.github.io/shipyard/
-- Lighthouse Performance: _to be filled in after measuring the deployed site (mobile)_
+- Lighthouse Performance: 92 (mobile, measured on the live site; Accessibility 100, Best Practices 100, SEO 100)
+
+![Lighthouse report](docs/lighthouse.png)
 
 ## Run locally
 
