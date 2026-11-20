@@ -1,20 +1,27 @@
 // app/components/ProductCard.tsx
 import Image from "next/image";
 import Link from "next/link";
-import type { Product } from "../data/products";
+import { imageSrc, type Product } from "../data/products";
 
 // The card takes one typed product as a prop.
-export default function ProductCard({ product }: { product: Product }) {
+export default function ProductCard({
+  product,
+  priority = false,
+}: {
+  product: Product;
+  priority?: boolean; // true only for the above-the-fold card (LCP)
+}) {
   return (
     <Link href={`/products/${product.id}`} className="card">
       <div className="card-art" style={{ background: product.accent }}>
         <Image
-          src={product.image}
+          src={imageSrc(product)}
           alt={product.name}
           width={460}
           height={345}
           className="card-img"
           sizes="(max-width: 560px) 100vw, 230px"
+          preload={priority}
         />
       </div>
       <div className="card-body">

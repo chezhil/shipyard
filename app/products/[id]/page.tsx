@@ -4,7 +4,7 @@ import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getProduct, products } from "../../data/products";
+import { getProduct, imageSrc, products } from "../../data/products";
 
 // Reviews ships in its own chunk, fetched only when it renders.
 const Reviews = dynamic(() => import("./Reviews"), {
@@ -52,7 +52,7 @@ export default async function ProductPage({
       <article className="detail">
         <div className="detail-art" style={{ background: product.accent }}>
           <Image
-            src={product.image}
+            src={imageSrc(product)}
             alt={product.name}
             width={460}
             height={345}
